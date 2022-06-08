@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400&family=Space+Grotesk:wght@500&display=swap');
+
+body {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin: 0px;
+    padding: 0px;
+}
+
+#lowerleft
+{
+    margin-bottom: 2em;
+    margin-left : 2em;
+    position: fixed;
+    bottom: 0;
+    background: #ffffff;
+    border: 1px solid #14A68A;
+    padding: 1em;
+    box-shadow: 5px 5px #14A68A;
+    max-width: 50%;
+}
+
+.pronouns {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 0.6em;
+    color: #BBBBBB;
+    display: inline;
+}
+
+.big {
+    font-family: 'Space Grotesk', 'Poppins', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 2em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.big em {
+    color: #14A68A;
+    font-style: normal;
+}
+
+a {
+    color: #14A68A;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-color: #14A68A;
+}
