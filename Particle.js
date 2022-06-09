@@ -3,14 +3,20 @@ class Particle {
     // instructions for how particles should look and
     // behave!
 
+    // x, y position of particles is relative to the canvas size
+    // where 0.0 is left-most/top and 1.0 is right-most/bottom
+
     constructor(x, y) {
 
         this.pos = createVector(x, y);
         this.diameter = 10;
-        this.vel = createVector(random(-1, 1), random(-1, 1));
+        this.vel = createVector(random(-1, 1), random(-1, 1)); // movement is assigned per particle
         this.vel.normalize();
 
     }
+
+    // sets diameter of particle relative to distance from the mouse
+    // because i think it's fun
 
     detectMouseProximity() {
 
@@ -20,6 +26,8 @@ class Particle {
         this.diameter = map(dist, 0, 320, 14, 10, true);
 
     }
+
+    // update the position of a given particle
 
     update() {
 
@@ -38,6 +46,9 @@ class Particle {
 
     }
 
+    // display the particle as a dot on the screen
+    // calls detectMouseProximity() to adjust size before drawing
+
     display() {
 
         stroke(255);
@@ -47,6 +58,8 @@ class Particle {
         ellipse(this.pos.x * windowWidth, this.pos.y * windowHeight, this.diameter, this.diameter);
        
     }
+
+    // utility functions for getting actual screen co-ordinates. 
 
     realx() {
         return this.pos.x * windowWidth;
